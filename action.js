@@ -25,4 +25,9 @@ axios.patch(
             "Content-Type": "application/json"
         }
     }
-);
+).then((response) => {
+    console.log("Succes! Data:" + response.data);
+}).catch((error) => {
+    console.error("Error! Data:" + error.response.data);
+    throw error;
+});
