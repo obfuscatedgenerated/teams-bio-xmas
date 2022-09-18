@@ -1,10 +1,8 @@
 name: 'Days until XMAS cron'
-description: ''
-author: 'obfuscatedgenerated'
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 5 ? * * *'
+    - cron: '0 5 * * *'
 jobs:
   update:
     runs-on: ubuntu-latest
