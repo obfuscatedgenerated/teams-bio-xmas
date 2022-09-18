@@ -1,0 +1,19 @@
+name: 'Days until XMAS cron'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    name: 'Update bio'
+    env:
+      NODE_ENV: production
+      TEAMS_TOKEN: ${{ secrets.TEAMS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm start
