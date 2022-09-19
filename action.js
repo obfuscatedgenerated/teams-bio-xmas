@@ -26,8 +26,8 @@ axios.patch(
         }
     }
 ).then((response) => {
-    console.log("Success! API Returned Data: " + response.data);
+    console.log("Success! API Returned Data: " + (typeof response.data === "object" ? JSON.stringify(response.data) : response.data));
 }).catch((error) => {
-    console.error("Error! Code: " + error.response.status + " API Returned Data: " + error.response.data);
+    console.error("Error! Code: " + error.response.status + " API Returned Data: " + (typeof error.response.data === "object" ? JSON.stringify(error.response.data) : error.response.data));
     throw error;
 });
