@@ -17,4 +17,4 @@ The default schedule is to run every day at 5:00 AM UTC. You can change this by 
 
 ## Defining a token in Development Mode
 
-With `NODE_ENV` not set to production, you can use the `.env` file to hold the secret. You can also set the token in regular environment variables. Please ensure you install dev dependencies with `npm install` (as opposed to `npm install --production` or `npm ci`) before running the script locally (ensure `NODE_ENV` is not set to production). In using the action, `NODE_ENV` is set to production, so `.env` is ignored.
+With `NODE_ENV` not set to production, you can use the `.env` file to hold the secret. Add a line with the content `TEAMS_TOKEN="token here"`, repalcing `token here` with the token. You can also set the token in regular environment variables. Please ensure you install dev dependencies with `npm install` (as opposed to `npm install --production` or `npm ci`) before running the script locally (ensure `NODE_ENV` is not set to production). In using the action, `NODE_ENV` is set to production, so `.env` is ignored.
