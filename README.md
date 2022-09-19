@@ -1,6 +1,6 @@
 # teams-bio-xmas
 
-Updates your Office 365 about me text to the number of days until Christmas.
+A GitHub action to update your Office 365 About Me text to the number of days until the Christmas holidays.
 
 ## Setup in Actions
 
@@ -19,6 +19,6 @@ The default schedule is to run every day at 5:00 AM UTC. You can change this by 
 
 With `NODE_ENV` not set to production, you can use the `.env` file to hold the secret. Add a line with the content `TEAMS_TOKEN="token here"`, repalcing `token here` with the token. You can also set the token in regular environment variables. Please ensure you install dev dependencies with `npm install` (as opposed to `npm install --production` or `npm ci`) before running the script locally (ensure `NODE_ENV` is not set to production). In using the action, `NODE_ENV` is set to production, so `.env` is ignored.
 
-## Setting Teams status message instead of Office About Me
+## Setting Teams Status Message instead of Office 365 About Me
 
 This feature is planned, however the Microsoft Graph API doesn't have an endpoint for getting and setting status messages. Check this [user voice](https://feedbackportal.microsoft.com/feedback/idea/a2ddf203-6b48-ec11-a819-000d3a0dbb29) for updates. There is a client side endpoint via Teams, but that access token expires after an hour and is not intended for automation.
